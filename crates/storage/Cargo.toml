@@ -1,0 +1,8 @@
+[package]
+name = "storage"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bincode = {version = "2.0.1", features = ["alloc"] }
+serde = { version = "1.0.219", features = ["derive"] }

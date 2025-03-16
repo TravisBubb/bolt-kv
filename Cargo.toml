@@ -1,6 +1,21 @@
+[workspace]
+members = [
+    "crates/storage"
+]
+
 [package]
-name = "bolt-kv"
+name = "bolt_kv"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+bincode = "2.0.1"
+serde = { version = "1.0.219", features = ["derive"] }
+
+[dev-dependencies]
+criterion = "0.5.1"
+storage = { path = "crates/storage" }
+
+[[bench]]
+name = "value_serialization_benchmark"
+harness = false
